@@ -691,3 +691,229 @@ Processing by MicropostsController#index as HTML
   [1m[36mMicropost Load (0.4ms)[0m  [1mSELECT `microposts`.* FROM `microposts`[0m
   Rendered microposts/index.html.erb within layouts/application (7.2ms)
 Completed 200 OK in 99ms (Views: 97.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-03-26 17:14:17 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (4.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users`
+  Rendered users/index.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 447ms (Views: 312.5ms | ActiveRecord: 27.4ms)
+
+
+Started GET "/microposts" for ::1 at 2015-03-26 17:14:31 -0700
+Processing by MicropostsController#index as HTML
+  [1m[36mMicropost Load (0.4ms)[0m  [1mSELECT `microposts`.* FROM `microposts`[0m
+  Rendered microposts/index.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 208ms (Views: 153.1ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/microposts" for ::1 at 2015-03-26 17:17:34 -0700
+Processing by MicropostsController#index as HTML
+  [1m[35mMicropost Load (0.4ms)[0m  SELECT `microposts`.* FROM `microposts`
+  Rendered microposts/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 114ms (Views: 111.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/microposts/new" for ::1 at 2015-03-26 17:30:15 -0700
+Processing by MicropostsController#new as HTML
+  Rendered microposts/_form.html.erb (99.5ms)
+  Rendered microposts/new.html.erb within layouts/application (232.9ms)
+Completed 200 OK in 353ms (Views: 338.4ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/microposts" for ::1 at 2015-03-26 17:30:19 -0700
+Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e+ogtHfH0H9d9plZhSvmOCW+QqLcx30i59uh0mAF/VUg9922TPi8G5ARLrM+GLVpzGvjRfbomcqL1cnKBDUqZg==", "micropost"=>{"content"=>"", "user_id"=>"1"}, "commit"=>"Create Micropost"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered microposts/_form.html.erb (6.3ms)
+  Rendered microposts/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 113ms (Views: 105.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/microposts" for ::1 at 2015-03-26 17:30:22 -0700
+Processing by MicropostsController#index as HTML
+  [1m[36mMicropost Load (0.5ms)[0m  [1mSELECT `microposts`.* FROM `microposts`[0m
+  Rendered microposts/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 129ms (Views: 126.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2015-03-26 17:32:47 -0700
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 12ms
+
+NameError (uninitialized constant User::FILL_IN):
+  app/models/user.rb:3:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/pmgagin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.7ms)
+  Rendered /home/pmgagin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /home/pmgagin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered /home/pmgagin/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.2ms)
+  Rendered /home/pmgagin/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/pmgagin/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/pmgagin/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/pmgagin/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/pmgagin/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (46.0ms)
+  Rendered /home/pmgagin/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/pmgagin/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/pmgagin/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (85.1ms)
+
+
+Started GET "/users" for ::1 at 2015-03-26 17:33:13 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users`
+  Rendered users/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 149ms (Views: 138.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/microposts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-26 17:33:13 -0700
+
+
+Started GET "/assets/scaffolds-c5350a0b06b2055264474841764adf60.css?body=1" for ::1 at 2015-03-26 17:33:13 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 17:33:14 -0700
+
+
+Started GET "/assets/application-61524d67267bd3c3400937eea1885d0a.css?body=1" for ::1 at 2015-03-26 17:33:14 -0700
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-26 17:33:14 -0700
+
+
+Started GET "/assets/microposts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-26 17:33:14 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-03-26 17:33:14 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-26 17:33:14 -0700
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-26 17:33:14 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 17:33:14 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-03-26 17:33:15 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (5.8ms)
+  Rendered users/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 101ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-03-26 17:33:17 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5afJadKj2YNJ0Epwsqbt3P7gqWD0ta0a8a5jEI8fyVq+ujRr6Zy154Q3/ZoJlb6NFzUIh96aSfKdoAsI6y8eaQ==", "user"=>{"name"=>"", "email"=>""}, "commit"=>"Create User"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered users/_form.html.erb (8.6ms)
+  Rendered users/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 130ms (Views: 116.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2015-03-26 17:33:19 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ig9sLhZKw9k7IBK/JqX/bNTrJCZz4vZDmsdlaKfOLVR5EpEsLXWvvfbHpVWdlqw9PT6FwVnNEqv2yQ1ww/76Zw==", "user"=>{"name"=>"sdfsf", "email"=>""}, "commit"=>"Create User"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered users/_form.html.erb (6.8ms)
+  Rendered users/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 145ms (Views: 137.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2015-03-26 17:33:24 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PE2p/tw3WFeDxSk3X7agPziqlqsaIGbOdakHwS3QOvZnUFT85wg0M04int3khfNu0X83TDAPgiYZp2/ZSeDtxQ==", "user"=>{"name"=>"", "email"=>"dfsdf"}, "commit"=>"Create User"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered users/_form.html.erb (7.8ms)
+  Rendered users/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 169ms (Views: 156.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2015-03-26 17:33:27 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 177ms (Views: 175.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/static_pages/home" for ::1 at 2015-03-26 17:40:11 -0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1491ms (Views: 1489.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-26 17:40:13 -0700
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-26 17:40:13 -0700
+
+
+Started GET "/assets/application-8ce5067598cd03bc722b97db5dd776ec.js?body=1" for ::1 at 2015-03-26 17:40:13 -0700
+
+
+Started GET "/static_pages/help" for ::1 at 2015-03-26 17:40:21 -0700
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 184ms (Views: 182.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/help" for ::1 at 2015-03-26 17:44:52 -0700
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 128ms (Views: 127.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/microposts-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-26 17:44:53 -0700
+
+
+Started GET "/assets/scaffolds-c5350a0b06b2055264474841764adf60.css?body=1" for ::1 at 2015-03-26 17:44:53 -0700
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-26 17:44:53 -0700
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-26 17:44:53 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-26 17:44:53 -0700
+
+
+Started GET "/assets/microposts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-26 17:44:53 -0700
+
+
+Started GET "/assets/application-61524d67267bd3c3400937eea1885d0a.css?body=1" for ::1 at 2015-03-26 17:44:53 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-03-26 17:44:53 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-26 17:44:53 -0700
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-26 17:44:53 -0700
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-26 17:44:53 -0700
+
+
+Started GET "/assets/application-8ce5067598cd03bc722b97db5dd776ec.js?body=1" for ::1 at 2015-03-26 17:44:53 -0700
+
+
+Started GET "/static_pages/home" for ::1 at 2015-03-26 17:44:59 -0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 167ms (Views: 165.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/about" for ::1 at 2015-03-26 18:07:00 -0700
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 133ms (Views: 131.7ms | ActiveRecord: 0.0ms)
